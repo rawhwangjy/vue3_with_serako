@@ -1,6 +1,34 @@
+<script setup>
+import { useRouter } from 'vue-router'
+const router = useRouter()
+
+const onClick = (id) => {
+  router.push({
+    path: `/about/${id}`
+  })
+}
+</script>
+
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div>
+    <h1>This is an about page1</h1>
+    <br />
+    리스트
+    <br />
+    <ul>
+      <li>
+        <button type="button" v-on:click="onClick('1')">ID : 1</button>
+      </li>
+      <li>
+        <button type="button" v-on:click="onClick('2')">ID : 2</button>
+      </li>
+      <li>
+        <button type="button" v-on:click="onClick('3')">ID : 3</button>
+      </li>
+      <li>
+        <button type="button" v-on:click="onClick('4')">ID : 4</button>
+      </li>
+    </ul>
   </div>
 </template>
 

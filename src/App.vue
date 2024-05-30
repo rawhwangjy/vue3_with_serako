@@ -6,7 +6,7 @@ const router = useRouter()
 
 const onClick = () => {
   router.push({
-    name: 'project'
+    name: 'testList'
   })
 }
 </script>
@@ -22,8 +22,8 @@ const onClick = () => {
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
         <!--  -->
-        <button type="button" @click="onClick">Project</button>
-        <RouterLink :to="{ name: 'project' }">Project2</RouterLink>
+        <button type="button" @click="onClick">TestList</button>
+        <RouterLink :to="{ name: 'project' }">Project</RouterLink>
       </nav>
     </div>
   </header>

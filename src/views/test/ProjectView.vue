@@ -1,6 +1,10 @@
+<script setup>
+// import { ref } from 'vue'
+</script>
+
 <template>
   <div class="about">
-    <h1>This is an project page</h1>
+    <h1>This is an project2 page</h1>
   </div>
 </template>
 
