@@ -1,18 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import AboutDetail from '../views/AboutDetail.vue'
-import TestList from '../views/test/TestList.vue'
-import ProjectView from '../views/test/ProjectView.vue'
-import TextMustach from '../views/test/list/TextMustach.vue'
-import VHTML from '../views/test/list/VHTML.vue'
-import Binding from '../views/test/list/Binding.vue'
-import Expression from '../views/test/list/Expression.vue'
-import Directive from '../views/test/list/Directive.vue'
-import StyleBinding from '../views/test/list/StyleBinding.vue'
-import ClassBinding from '../views/test/list/ClassBinding.vue'
-import Reactivity from '../views/test/list/Reactivity.vue'
-import VIf from '../views/test/list/VIf.vue'
-import VFor from '../views/test/list/VFor.vue'
+import HomeView from '@/views/HomeView.vue'
+import AboutDetail from '@/views/AboutDetail.vue'
+import TestList from '@/views/test/TestList.vue'
+import ProjectView from '@/views/test/ProjectView.vue'
+import TextMustach from '@/views/test/list/TextMustach.vue'
+import VHTML from '@/views/test/list/VHTML.vue'
+import Binding from '@/views/test/list/Binding.vue'
+import Expression from '@/views/test/list/Expression.vue'
+import Directive from '@/views/test/list/Directive.vue'
+import StyleBinding from '@/views/test/list/StyleBinding.vue'
+import ClassBinding from '@/views/test/list/ClassBinding.vue'
+import Reactivity from '@/views/test/list/Reactivity.vue'
+import VIf from '@/views/test/list/VIf.vue'
+import VFor from '@/views/test/list/VFor.vue'
 
 // 라우터: 라우트와 라우팅을 관리
 const router = createRouter({
@@ -35,7 +35,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      component: () => import('@/views/AboutView.vue')
     },
     //
     {

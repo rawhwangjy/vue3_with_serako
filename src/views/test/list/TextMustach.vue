@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-const msg = ref('보간법 메시지')
+const msg = ref('보간법 메시지22')
 </script>
 
 <template>

@@ -25,6 +25,7 @@ const secondArr = {
     <h1>스타일 바인딩</h1>
     <br />
     <h2>인라인 바인딩</h2>
+    <!-- <div style="color: red; font-size: 30px">dd</div> -->
     <div :style="`color: ${activeColor}; font-size: 10px`">인라인으로 바인딩</div>
     <br />
     <h2>변수 바인딩</h2>

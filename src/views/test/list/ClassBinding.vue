@@ -31,6 +31,7 @@ const errorClass = ref('myError')
     <h2>객체 구문</h2>
     <h3>* Boolean 조건에 따라 바인딩</h3>
     <div :class="{ myClassName: isActive }">객체 구문 Boolean 조건에 따라 바인딩</div>
+    <div class="myClassName"></div>
     <br />
     <h3>* 삼항연산자 조건에 따라 바인딩</h3>
     <div :class="isActive ? 'colorBlue' : 'colorRed'">객체 구문 삼항연산자 조건에 따라 바인딩</div>

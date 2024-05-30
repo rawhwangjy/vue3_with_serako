@@ -2,11 +2,18 @@
 import { useRouter } from 'vue-router'
 const router = useRouter()
 
+// ES6
 const onClick = (id) => {
+  // path: '/about/:id',
   router.push({
     path: `/about/${id}`
   })
 }
+// function onClick2 (id) {
+//   router.push({
+//     path: `/about/${id}`
+//   })
+// }
 </script>
 
 <template>

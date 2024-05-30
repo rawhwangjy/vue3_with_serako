@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref, reactive, computed } from 'vue'
+import { onMounted, ref, reactive, computed, watch } from 'vue'
 
 const refData = ref('ref 데이터')
 const reactiveData = reactive({
@@ -7,15 +7,15 @@ const reactiveData = reactive({
   age: 38
 })
 
-let message = '안녕하세요. abc입니다.'
-// let message = ref('안녕하세요. abc입니다.')
+// let message = '안녕하세요. abc입니다.'
+let message = ref('안녕하세요. abc입니다.')
 const reverseMessage = () => {
-  // console.log('message', message)
-  message = message.split('').reverse().join('')
-  // message.value = message.value.split('').reverse().join('')
+  // message = message.split('').reverse().join('')
+  // console.log('message', message.value)
+  message.value = message.value.split('').reverse().join('')
 }
 const uppercasedMessage = computed(() => {
-  return message.toUpperCase()
+  return message.value.toUpperCase()
   // return message.value.toUpperCase()
 })
 
@@ -26,12 +26,12 @@ const incrementCount = () => {
 }
 
 // 상단에 watch 추가
-// watch(count, (newValue, oldValue) => {
-//   watchMsg.value = `count가 ${oldValue}에서 ${newValue}로 변경되었습니다.`
-//   if (newValue === 3) {
-//     watchMsg.value = '카운트가 3에 도달했습니다!'
-//   }
-// })
+watch(count, (newValue, oldValue) => {
+  watchMsg.value = `count가 ${oldValue}에서 ${newValue}로 변경되었습니다.`
+  if (newValue === 3) {
+    watchMsg.value = '카운트가 3에 도달했습니다!'
+  }
+})
 onMounted(() => {
   // console.log('ref의 값은? >', refData.value)
   // console.log('------------------------------------------------------------------')
