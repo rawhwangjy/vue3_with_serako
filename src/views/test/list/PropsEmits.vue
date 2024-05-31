@@ -151,12 +151,19 @@ td {
   border-top-right-radius: 5px;
   margin-left: -1px;
 }
+.tabs-component-tab .is-active {
+  background-color: green;
+  color: white;
+}
 .tabs-component-tab:nth-child(1) {
   margin-left: 0;
 }
+.tabs-component-tab:last-child {
+  margin-left: 50px;
+}
 .tabs-component-tab a {
   display: flex;
-  padding: 5px;
+  padding: 5px 20px;
   font-size: 20px;
 }
 .tabs-component-panels {
