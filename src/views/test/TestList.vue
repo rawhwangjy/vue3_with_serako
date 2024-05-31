@@ -40,12 +40,16 @@ const list = ref([
   {
     name: '리스트 렌더링',
     url: '/test/vFor'
+  },
+  {
+    name: 'Props & Emits',
+    url: '/test/propsEmits'
   }
 ])
 </script>
 
 <template>
-  <div class="about">
+  <div>
     <h1>This is an project page</h1>
     <br />
     <ul>

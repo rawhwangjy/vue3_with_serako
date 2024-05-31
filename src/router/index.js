@@ -13,6 +13,7 @@ import ClassBinding from '@/views/test/list/ClassBinding.vue'
 import Reactivity from '@/views/test/list/Reactivity.vue'
 import VIf from '@/views/test/list/VIf.vue'
 import VFor from '@/views/test/list/VFor.vue'
+import PropsEmits from '@/views/test/list/PropsEmits.vue'
 
 // 라우터: 라우트와 라우팅을 관리
 const router = createRouter({
@@ -32,26 +33,17 @@ const router = createRouter({
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('@/views/AboutView.vue')
     },
     //
     {
       path: '/test',
       name: 'testList',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: TestList
     },
     {
       path: '/project',
       name: 'project',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: ProjectView
     },
     {
@@ -103,6 +95,12 @@ const router = createRouter({
       path: '/test/vFor',
       name: 'vFor',
       component: VFor
+    },
+    //
+    {
+      path: '/test/propsEmits',
+      name: 'propsEmits',
+      component: PropsEmits
     }
   ]
 })
