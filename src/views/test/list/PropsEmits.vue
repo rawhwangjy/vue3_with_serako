@@ -23,6 +23,7 @@ const onLeave = () => {
 
 <template>
   <div>
+    <h1>Props & Emits && ref</h1>
     <table>
       <thead>
         <tr>
