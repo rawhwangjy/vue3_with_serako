@@ -14,6 +14,7 @@ import Reactivity from '@/views/test/list/Reactivity.vue'
 import VIf from '@/views/test/list/VIf.vue'
 import VFor from '@/views/test/list/VFor.vue'
 import PropsEmits from '@/views/test/list/PropsEmits.vue'
+import TemplateSlot from '@/views/test/list/TemplateSlot.vue'
 
 // 라우터: 라우트와 라우팅을 관리
 const router = createRouter({
@@ -97,6 +98,11 @@ const router = createRouter({
       component: VFor
     },
     //
+    {
+      path: '/test/templateSlot',
+      name: 'templateSlot',
+      component: TemplateSlot
+    },
     {
       path: '/test/propsEmits',
       name: 'propsEmits',

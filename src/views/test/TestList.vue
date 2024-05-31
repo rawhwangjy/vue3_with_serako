@@ -42,6 +42,10 @@ const list = ref([
     url: '/test/vFor'
   },
   {
+    name: 'Template & Slot & Fallthrough',
+    url: '/test/templateSlot'
+  },
+  {
     name: 'Props & Emits',
     url: '/test/propsEmits'
   }

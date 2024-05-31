@@ -1,6 +1,11 @@
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 
+const inputRef = ref(null)
+// 부모 요소에서 ref 접근
+defineExpose({
+  inputRef
+})
 const props = defineProps({
   modelValue: {
     type: String,
@@ -33,6 +38,7 @@ const props = defineProps({
 const emit = defineEmits(['update:modelValue'])
 onMounted(() => {
   console.log('최초 선택된 배열 index >>>', props.selectedList)
+  console.log('inputRef >>>', inputRef.value)
 })
 </script>
 <template>
@@ -40,6 +46,7 @@ onMounted(() => {
     <label :for="id" class="input-title">{{ title }}</label>
     <div class="input-inner-wrap">
       <input
+        ref="inputRef"
         :id="id"
         :value="modelValue"
         @input="(event) => emit('update:modelValue', event.target.value)"
@@ -70,6 +77,7 @@ onMounted(() => {
   display: flex;
   input {
     height: 40px;
+    outline: 0 none;
     border: 1px solid #ccc;
     border-radius: 5px;
   }

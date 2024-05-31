@@ -6,11 +6,19 @@ const picked = ref('')
 const selected = ref('')
 
 import MyInput from '@/components/MyInput.vue'
-const myinput = ref('')
+const myInputModel = ref('')
 const onChangeInput = (value) => {
   console.log('inptu value', value)
 }
 const listData = ref(['전체', '강남구', '강동구', '용산구'])
+const myInput = ref(null)
+const onFocus = () => {
+  console.log('inputRef >>>', myInput.value.inputRef)
+  myInput.value.inputRef.style.borderColor = 'red'
+}
+const onLeave = () => {
+  myInput.value.inputRef.style.borderColor = '#ccc'
+}
 </script>
 
 <template>
@@ -115,13 +123,16 @@ const changeId = (id) => {}
         </tab>
         <tab name="component">
           <MyInput
-            v-model="myinput"
+            ref="myInput"
+            v-model="myInputModel"
             @update:modelValue="onChangeInput"
             :list="listData"
             :selectedList="2"
             id="myInputId"
             title="인풋의 타이틀~"
             btnDelete
+            @mouseover="onFocus"
+            @mouseleave="onLeave"
           />
         </tab>
       </tabs>
